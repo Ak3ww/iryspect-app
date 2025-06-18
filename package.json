@@ -1,0 +1,21 @@
+{
+  "name": "iryspect-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@irys/web-upload": "^0.2.0",
+    "@irys/web-upload-ethereum": "^0.2.0",
+    "@irys/web-upload-ethereum-ethers-v6": "^0.2.0",
+    "@privy-io/react-auth": "^3.0.0",
+    "@supabase/supabase-js": "^2.0.0",
+    "ethers": "^6.0.0",
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
