@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import AuthFlow from '../components/AuthFlow';
 import ReviewForm from '../components/ReviewForm';
 import IryspectForm from '../components/IryspectForm';
+import Leaderboard from '../components/Leaderboard';
 
 export default function Home() {
   const [authenticatedUser, setAuthenticatedUser] = useState(null);
@@ -15,13 +16,13 @@ export default function Home() {
         <div className="mt-10 space-y-10">
           <p className="text-xl mb-4">Welcome, {authenticatedUser.twitter.displayName} 👑</p>
 
-          {/* For testing — review yourself */}
           <ReviewForm reviewerId={authenticatedUser.id} targetId={authenticatedUser.id} />
-
-          {/* For testing — iryspect yourself */}
           <IryspectForm iryspectorId={authenticatedUser.id} targetId={authenticatedUser.id} />
         </div>
       )}
+
+      {/* Leaderboard is always visible */}
+      <Leaderboard />
     </div>
   );
 }
