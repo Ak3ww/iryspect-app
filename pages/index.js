@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AuthFlow from '../components/AuthFlow';
+import ReviewForm from '../components/ReviewForm';
 
 export default function Home() {
   const [authenticatedUser, setAuthenticatedUser] = useState(null);
@@ -11,8 +12,15 @@ export default function Home() {
 
       {authenticatedUser && (
         <div className="mt-10">
-          <p className="text-xl">Welcome to IRYSPECT, {authenticatedUser.twitter.displayName} 👑</p>
-          {/* Later we'll put ReviewForm and IryspectForm here */}
+          <p className="text-xl mb-6">
+            Welcome, {authenticatedUser.twitter.displayName} 👑
+          </p>
+
+          {/* Example: Review yourself for testing */}
+          <ReviewForm 
+            reviewerId={authenticatedUser.id} 
+            targetId={authenticatedUser.id} 
+          />
         </div>
       )}
     </div>
